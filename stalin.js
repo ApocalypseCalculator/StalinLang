@@ -5,11 +5,14 @@ let path = process.argv[2];
 
 if (path && fs.existsSync(path)) {
     let stats = fs.statSync(path);
-    if (stats.isFile() && /.stalin?/.test(path)) {
-        let data = fs.readFileSync(path);
-        transpiler.transpile(data.toString());
-        process.exit(0);
+    if(stats.size > 300*1024*1024){ //limit file size to 300mb
+        console.log('File max size exceeded (maximum 300mb)');
+        return;
+    }
+    else if (stats.isFile() && /.stalin?/.test(path)) {
+        let data = fs.readFileSync(path, 'utf-8');
+        transpiler(data);
+        return;
     }
 }
 console.log('Please specify a valid StalinLang source file');
-process.exit(0);
