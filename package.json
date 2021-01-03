@@ -1,0 +1,24 @@
+{
+  "name": "stalinlang",
+  "version": "0.0.0",
+  "description": "An esoteric programming language based on Stalin and his glorious gulags",
+  "main": "stalin.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ApocalypseCalculator/StalinLang.git"
+  },
+  "keywords": [
+    "esoteric",
+    "language",
+    "stalinlang"
+  ],
+  "author": "ApocalypseCalculator",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/ApocalypseCalculator/StalinLang/issues"
+  },
+  "homepage": "https://github.com/ApocalypseCalculator/StalinLang#readme"
+}
