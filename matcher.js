@@ -1,6 +1,45 @@
 module.exports = {
     matches: [{
-        st: "GULAG",
+        st: /GULAG/g,
         js: "console.log"
+    }, {
+        st: /LIFESENTENCE/g,
+        js: "const"
+    }, {
+        st: /HOLD/g,
+        js: "let"
+    }, {
+        st: /CONFISCATE/g,
+        js: "new"
+    }, {
+        st: /EXECUTE/g,
+        js: "eval"
+    }, {
+        st: /INTERROGATE/g,
+        js: "if"
+    }, {
+        st: /AGAIN/g,
+        js: "else"
+    }, {
+        st: /HACKERMAN/g,
+        js: "function"
+    }, {
+        st: /CHAIN/g,
+        js: "var"
+    }, {
+        st: /REPEAT/g,
+        js: "for"
+    }, {
+        st: /TORTURE/g,
+        js: "while"
+    }, {
+        st: /FIVEYEARPLAN/g,
+        js: "try"
+    }, {
+        st: /FALLBACK/g,
+        js: "catch"
+    }, {
+        st: /ECONOMY/g,
+        js: "null"
     }]
 }
