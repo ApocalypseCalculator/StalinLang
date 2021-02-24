@@ -1,4 +1,3 @@
-const fs = require('fs');
 const matcher = require('./matcher');
 
 module.exports = (data) => {

@@ -2,6 +2,7 @@ const fs = require('fs');
 const readline = require('readline');
 const transpiler = require('./transpiler');
 const DEFAULT_OUT = "out_cache.js";
+const package = require('./package.json');
 
 let path = process.argv[2];
 readline.emitKeypressEvents(process.stdin);
@@ -66,7 +67,14 @@ if (path && fs.existsSync(path)) {
     }
 }
 else {
-    console.log('Please specify a valid StalinLang source file');
+    console.log(`\n\x1b[32mStalinLang Shell v${package.version}\x1b[0m\n\x1b[33mIf you wish to run a source file, please add the file path as an argument to the command\x1b[0m\n`);
+    process.stdin.on("keypress", (str, key) => {
+        if (key.ctrl && key.name === 'c') {
+            console.log('\n\nBye!');
+            process.exit(0);
+        }
+    })
+    require('./shell');
 }
 
 function getName(cur) {
