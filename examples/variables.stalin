@@ -1,0 +1,5 @@
+HOLD x = 10;
+x+=20;
+LIFESENTENCE y = 30;
+x+=y;
+GULAG(x);

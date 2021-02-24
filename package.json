@@ -3,6 +3,7 @@
   "version": "0.0.0",
   "description": "An esoteric programming language based on Stalin and his glorious gulags",
   "main": "stalin.js",
+  "bin": "bin.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },

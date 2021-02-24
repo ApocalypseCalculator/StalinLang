@@ -7,9 +7,8 @@ let path = process.argv[2];
 readline.emitKeypressEvents(process.stdin);
 process.stdin.setRawMode(true);
 
-console.log('Compiling ...');
-
 if (path && fs.existsSync(path)) {
+    console.log('Compiling ...');
     let stats = fs.statSync(path);
     if (stats.size > 10 * 1024 * 1024) { //limit file size to 10mb
         console.log('\x1b[33mFile max size exceeded (maximum 10mb), compilation aborted\x1b[0m');
@@ -48,7 +47,7 @@ if (path && fs.existsSync(path)) {
                 let timeout = 500 + 200 * Math.ceil(Math.pow(stats.size / (1024), 0.7));
                 setTimeout(function () {
                     try {
-                        require(`./${outfile}`);
+                        require(`${process.cwd()}/${outfile}`);
                         setTimeout(function () {
                             console.log('\nFinished execution ... press any key to exit');
                             process.stdin.on("keypress", (str, key) => {
