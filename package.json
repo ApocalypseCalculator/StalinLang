@@ -1,6 +1,6 @@
 {
   "name": "stalinlang",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "description": "An esoteric programming language based on Stalin and his glorious gulags",
   "main": "stalin.js",
   "bin": "bin.js",
