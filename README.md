@@ -14,6 +14,15 @@ Download the latest release in the releases tab. Add the path of the executable 
 ```sh
 stalin code.stalin
 ```
+(you'd need to rename the executable to stalin)
+
+Alternatively you can use the StalinLang shell by simply running: 
+```
+stalin
+```
+(exit with Ctrl+C)
+![](https://media.discordapp.net/attachments/670393876883963905/814265649135091712/unknown.png)
+
 
 Here is a sample StalinLang code: 
 ```stalin
