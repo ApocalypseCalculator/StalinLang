@@ -2,6 +2,8 @@
 
 An experimental esoteric programming language created using Node.js
 
+![](https://cdn.discordapp.com/emojis/631609048508137512.png)
+
 ## Warning
 
 This is terribly made and simply replaces keywords in JS and then transpiles to JS.
