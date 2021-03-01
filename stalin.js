@@ -61,6 +61,9 @@ if (path) {
                         }
                         catch (err) {
                             console.log(`\x1b[31mError!\n\n${err}\x1b[0m`);
+                            fs.unlink(outfile, () => {
+                                process.exit(0);
+                            })
                         }
                     }, timeout);
                 }
